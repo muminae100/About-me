@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+
+}
+.navigation-container{
+    position: fixed;
+    padding:15px;
+    width: 100%;
+    background-color: #0C7C59;
+}
+nav{
+    float: right;
+}
+nav a{
+    position: relative;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2B303A;
+}
+nav a::before{
+    content:"";
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    background-color: #D64933;
+    height: 5px;
+    transform: scale(0,1);
+    transition: transform 1s ease-in-out;
+    transform-origin: left;
+}
+nav a:hover::before{
+    transform: scale(1,1);
+}
+nav a::after{
+    content:"";
+    width:100%;
+    bottom:80%;
+    position: absolute;
+    background-color: #D64933;
+    height: 5px;
+    transform:scale(0,1);
+    transition:transform 1s ease-in-out;
+    transform-origin:right;
+    right:0;
+}
+nav a:hover::after{
+    transform:scale(1,1);
+}
+.my-logo{
+    float: left;
+    width: 70px;
+}
+.my-description-container{
+    display: grid;
+    grid-template-columns:650px auto;
+    grid-gap: 20px;
+    padding: 10px;
+    padding-top: 100px;
+    width: 1200px;
+    margin: auto;
+}
+  .my-name{
+      font-size:100px;
+      font-weight: bold;
+  }
+  .my-job{
+      font-size: 25px;
+      padding: 15px;
+  }
